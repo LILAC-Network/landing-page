@@ -150,6 +150,7 @@ h2:not(.title) {
 }
 
 section#about {
+    background: transparent;
     padding: 20px 0;
 }
 
