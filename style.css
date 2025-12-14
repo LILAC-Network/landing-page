@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
     width: 100vw;
     min-height: 100vh;
+    overflow-x: hidden;
     background: #000;
 }
 
@@ -90,30 +90,26 @@ a {
 }
 
 main {
-    width: 100vw;
-    height: 54vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
-.glowing {
-    --size: 170px;
-
-    z-index: -1;
-    position: absolute;
-    left: calc(50% - var(--size) / 2);
-    width: var(--size);
-    height: 0.0001px;
-    border-radius: 50%;
-    display: block;
-    box-shadow: 0px 0px 99999999px 100px #ccc9d4aa;
-}
-
-main {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    width: 100vw;
+    height: 54vh;
+    overflow-x: hidden;
+}
+
+main::before {
+    content: '';
+    --size: 170px;
+    z-index: -1;
+    position: absolute;
+    left: calc(50% - var(--size) / 2);
+    transform: translateY(-50%);
+    width: var(--size);
+    height: 0.0001px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 9999999px 100px #ccc9d4aa;
 }
 
 h1:not(.title) {
